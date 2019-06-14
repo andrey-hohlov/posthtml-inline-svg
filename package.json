@@ -1,0 +1,37 @@
+{
+  "name": "posthtml-inline-svg",
+  "version": "0.0.1",
+  "description": "Inline svg icons in HTML",
+  "keywords": [
+    "posthtml",
+    "posthtml-plugin",
+    "html",
+    "postproccessor",
+    "svg"
+  ],
+  "author": "Andrey Khokhlov <andrey@hohlov.pro>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andrey-hohlov/posthtml-inline-svg.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrey-hohlov/posthtml-inline-svg/issues"
+  },
+  "homepage": "https://github.com/andrey-hohlov/posthtml-inline-svg",
+  "dependencies": {
+    "svgo": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "expect": "^24.8.0",
+    "mocha": "^6.1.4",
+    "posthtml": "^0.11.4"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint *.js test/",
+    "pretest": "npm run lint",
+    "test": "mocha --check-leaks"
+  }
+}
