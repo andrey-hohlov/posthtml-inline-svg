@@ -7,6 +7,7 @@ const svgo = new SVGO({
   plugins: [
     { removeXMLNS: true },
     { removeViewBox: false },
+    { removeDimensions: true },
   ],
 });
 
