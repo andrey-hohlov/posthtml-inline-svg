@@ -13,7 +13,7 @@ const svgo = new SVGO({
 
 const cache = {};
 
-module.exports = function postHtmlInlineSvg(options) {
+module.exports = function postHtmlInlineSvg(options = {}) {
   const root = options.root || process.cwd();
   const tag = options.tag || 'icon';
   const attr = options.attr || 'src';
@@ -58,7 +58,9 @@ module.exports = function postHtmlInlineSvg(options) {
 
           Object.assign(nodes[0].attrs, attrs);
           node.tag = false;
-          node.content = nodes;
+          node.content = options.comment
+            ? [`<!-- ${src} -->`, ...nodes]
+            : nodes;
           resolve();
         } catch (err) {
           reject(err);

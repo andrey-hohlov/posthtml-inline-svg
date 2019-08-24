@@ -45,3 +45,4 @@ posthtml(inlineSVG({
 | **root** | `process.cwd()` | Path icon source related to |
 | **tag** | `icon` | HTML-tag to process |
 | **attr** | `src` | Attribute to get icon path |
+| **comment** | false | Render HTML comment with icon source before icon markup |
