@@ -47,6 +47,7 @@ module.exports = function postHtmlInlineSvg(options = {}) {
 
   return tree => new Promise((resolve, reject) => {
     const promises = [];
+    if (!tree.parser) tree.parser = parser;
     if (!tree.match) tree.match = match;
     tree.match({ tag }, (node) => {
       promises.push(new Promise(async (resolve, reject) => {
