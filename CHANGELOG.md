@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/andrey-hohlov/posthtml-inline-svg/compare/v0.0.5...v0.1.0) (2020-01-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename `root` option to `cwd`
+
+* rename `root` option to `cwd` ([8a7c689](https://github.com/andrey-hohlov/posthtml-inline-svg/commit/8a7c68951bf5b89f08637fc955e54e8b1f72d737))
+
 ### [0.0.5](https://github.com/andrey-hohlov/posthtml-inline-svg/compare/v0.0.4...v0.0.5) (2020-01-15)
 
 
