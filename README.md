@@ -29,20 +29,20 @@ const fs = require('fs')
 const posthtml = require('posthtml');
 const inlineSVG = require('posthtml-inline-svg');
 
-posthtml(inlineSVG({ 
-  root: path.resolve('src'),
+posthtml(inlineSVG({
+  cwd: path.resolve('src'),
   tag: 'icon',
   attr: 'src',
  }))
   .process(fs.readFileSync('index.html', 'utf8'))
   .then((result) => console.log(result.html));
-```  
+```
 
 ## Options
 
 |Option|Default|Description|
 |:-:|:--|:--|
-| **root** | `process.cwd()` | Path icon source related to |
+| **cwd** | `process.cwd()` | Path icon source related to |
 | **tag** | `icon` | HTML-tag to process |
 | **attr** | `src` | Attribute to get icon path |
 | **comment** | false | Render HTML comment with icon source before icon markup |

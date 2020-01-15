@@ -15,7 +15,7 @@ const svgo = new SVGO({
 const cache = {};
 
 module.exports = function postHtmlInlineSvg(options = {}) {
-  const root = options.root || process.cwd();
+  const cwd = options.cwd || process.cwd();
   const tag = options.tag || 'icon';
   const attr = options.attr || 'src';
 
@@ -53,7 +53,7 @@ module.exports = function postHtmlInlineSvg(options = {}) {
       promises.push(new Promise(async (resolve, reject) => {
         try {
           const src = node.attrs[attr];
-          const svg = await getSVG(path.resolve(root, src));
+          const svg = await getSVG(path.resolve(cwd, src));
           const nodes = parser(svg);
           const attrs = node.attrs;
           delete attrs[attr];

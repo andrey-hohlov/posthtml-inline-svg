@@ -9,7 +9,7 @@ function run(html, options) {
 }
 
 describe('posthtml-inline-svg', () => {
-  const options = { root: './test/assets' };
+  const options = { cwd: './test/assets' };
 
   it('should inline SVG', () => {
     return run(
@@ -55,7 +55,7 @@ describe('posthtml-inline-svg', () => {
     });
   });
 
-  it('should work without root option', () => {
+  it('should work without cwd option', () => {
     return run(
       '<icon src="test/assets/icon.svg"></icon>',
       {}
