@@ -25,6 +25,7 @@ npm i -D posthtml posthtml-inline-svg
 ## Usage
 
 ```js
+const path = require('path')
 const fs = require('fs')
 const posthtml = require('posthtml');
 const inlineSVG = require('posthtml-inline-svg');
