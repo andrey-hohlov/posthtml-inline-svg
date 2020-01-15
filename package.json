@@ -26,12 +26,14 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "expect": "^24.9.0",
-    "mocha": "^6.2.2"
+    "mocha": "^6.2.2",
+    "standard-version": "^7.0.1"
   },
   "main": "index.js",
   "scripts": {
     "lint": "node_modules/.bin/eslint *.js test/",
     "pretest": "npm run lint",
-    "test": "mocha --check-leaks"
+    "test": "mocha --check-leaks",
+    "release": "standard-version"
   }
 }
