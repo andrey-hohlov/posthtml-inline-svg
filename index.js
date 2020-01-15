@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const SVGO = require('svgo');
 const parser = require('posthtml-parser');
+const match = require('posthtml/lib/api').match;
 
 const svgo = new SVGO({
   plugins: [
@@ -46,7 +47,8 @@ module.exports = function postHtmlInlineSvg(options = {}) {
 
   return tree => new Promise((resolve, reject) => {
     const promises = [];
-
+    if (!tree.parser) tree.parser = parser;
+    if (!tree.match) tree.match = match;
     tree.match({ tag }, (node) => {
       promises.push(new Promise(async (resolve, reject) => {
         try {

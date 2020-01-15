@@ -10,5 +10,7 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2017,
   },
-  rules:  {},
+  rules:  {
+    'no-async-promise-executor': 'off'
+  },
 };
