@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/andrey-hohlov/posthtml-inline-svg/compare/v0.1.0...v0.2.0) (2020-05-25)
+
+
+### Features
+
+* custom svgo config ([90fde00](https://github.com/andrey-hohlov/posthtml-inline-svg/commit/90fde004bd69b575ea9264c60e9d5f41a7e39c78))
+
 ## [0.1.0](https://github.com/andrey-hohlov/posthtml-inline-svg/compare/v0.0.5...v0.1.0) (2020-01-15)
 
 
