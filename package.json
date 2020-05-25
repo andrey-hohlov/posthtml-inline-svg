@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/andrey-hohlov/posthtml-inline-svg",
   "dependencies": {
-    "svgo": "^1.3.2",
-    "posthtml": "^0.12.0"
+    "posthtml": "^0.12.3",
+    "svgo": "^1.3.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
     "expect": "^24.9.0",
-    "mocha": "^6.2.2",
-    "standard-version": "^7.0.1"
+    "mocha": "^6.2.3",
+    "standard-version": "^7.1.0"
   },
   "main": "index.js",
   "scripts": {
