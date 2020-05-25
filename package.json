@@ -31,7 +31,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "node_modules/.bin/eslint *.js test/",
+    "lint": "eslint *.js test/",
     "pretest": "npm run lint",
     "test": "mocha --check-leaks",
     "release": "standard-version"

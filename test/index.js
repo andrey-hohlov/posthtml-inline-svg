@@ -65,4 +65,25 @@ describe('posthtml-inline-svg', () => {
       );
     });
   });
+
+  // https://github.com/andrey-hohlov/posthtml-inline-svg/issues/6
+  it('should apply custom svgo config', () => {
+    return run(
+      '<icon src="test/assets/icon-with-title.svg"></icon>',
+      {
+        svgo: {
+          plugins: [
+            { removeTitle: false },
+            { removeXMLNS: true },
+            { removeViewBox: false },
+            { removeDimensions: true },
+          ],
+        },
+      },
+    ).then(res => {
+      expect(res).toBe(
+        '<svg viewBox="0 0 100 100"><title>Title</title><path d="M6 0l8 89.9L49.9 100 86 89.9 94 0H6zm70.6 29.3H34.5l.9 11.3h40.2l-3.1 34-22.4 6.2v.1h-.3l-22.6-6.2-1.4-17.4h10.9l.8 8.8 12.2 3.3L62.2 66l1.4-14.3H25.3l-2.9-33.4h55.3l-1.1 11z"></path></svg>'
+      );
+    });
+  });
 });

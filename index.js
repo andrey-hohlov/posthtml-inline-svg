@@ -4,13 +4,13 @@ const SVGO = require('svgo');
 const parser = require('posthtml-parser');
 const match = require('posthtml/lib/api').match;
 
-const svgo = new SVGO({
+const defaultSvgoOptions = {
   plugins: [
     { removeXMLNS: true },
     { removeViewBox: false },
     { removeDimensions: true },
   ],
-});
+};
 
 const cache = {};
 
@@ -18,6 +18,7 @@ module.exports = function postHtmlInlineSvg(options = {}) {
   const cwd = options.cwd || process.cwd();
   const tag = options.tag || 'icon';
   const attr = options.attr || 'src';
+  const svgo = new SVGO(options.svgo || defaultSvgoOptions);
 
   const localCache = {};
 
