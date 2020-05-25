@@ -46,4 +46,5 @@ posthtml(inlineSVG({
 | **cwd** | `process.cwd()` | Path icon source related to |
 | **tag** | `icon` | HTML-tag to process |
 | **attr** | `src` | Attribute to get icon path |
-| **comment** | false | Render HTML comment with icon source before icon markup |
+| **comment** | `false` | Render HTML comment with icon source before icon markup |
+| **svgo** `since 0.2.0` | `null` | Custom [SVGO](https://github.com/svg/svgo) config |
